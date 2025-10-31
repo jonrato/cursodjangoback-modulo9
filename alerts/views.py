@@ -11,7 +11,7 @@ def fetch_logs(request):
     try:
         api_url = os.getenv("LOGEMITTER_API")
         response = requests.get(api_url)
-        return Response(response.json())
+        return Response(response.json())#
     except Exception as e:
         return Response({"error": str(e)}, status=500)
     
